@@ -169,28 +169,7 @@ class Workbook(TableauServer):
 
 
 
-def Main():
-    wb = Workbook()
 
-    wb.get_server_creds(f_path=f())
-    wb.login()
-    wb.get_workbooks()
-    wb.get_projects()
-    print(wb.workbooks)
-    print(wb.projects)
-
-    wb.download_workbook(dl_path='C:\\Users\\wmurphy\\Desktop\\workbooks',
-                          wb_name='DWM_1/30/18', new_wb_name='18.twbx')
-    wb.open_workbook_xml(f_path='C:\\Users\\wmurphy\\Desktop\\workbooks', wb_name='18.twbx')
-    wb.update_workbook_parameter("Parameter 5", tag_name='members', save=True)
-    wb.package_to_twbx()
-    wb.publish(wb_path='C:\\Users\\wmurphy\\Desktop\\workbooks\\WORKBOOK.twbx',
-               wb_name='ZIPPED_WORKBOOK',
-               proj_id='d540a2b7-7547-4694-b508-7ef4cb4c2fbd')
-
-
-if __name__=='__main__':
-    Main()
 
 
 
